@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { CustomStyles } from '../../CustomStyles';
+import Style from '../../style';
 
 export default StyleSheet.create({
   container: {
@@ -50,26 +50,28 @@ export default StyleSheet.create({
     paddingTop: '12%',
   },
   title: {
+    ...Style.Typography.profileTitle,
     textAlign: 'center',
     alignSelf: 'center',
-    color: '#fff',
-    fontSize: 40,
-    marginTop: '10%',
+    color: Style.Colors.primaryWhite,
+    marginTop: '20%',
   },
   subTitle: {
+    ...Style.Typography.homeSubtitle,
     textAlign: 'center',
     alignSelf: 'center',
-    color: CustomStyles.DarkGrayColor,
+    color: Style.Colors.primaryGrey,
     marginTop: '2%',
   },
   label: {
-    color: CustomStyles.DarkGrayColor,
+    ...Style.Typography.description,
+    color: Style.Colors.primaryGrey,
     marginTop: '2%',
   },
   labelContainer: {
     borderWidth: 0.5,
     borderRadius: 8,
-    borderColor: CustomStyles.DimGrayColor,
+    borderColor: Style.Colors.primaryGrey,
     paddingHorizontal: 10,
     marginTop: 8,
     width: 330,
@@ -81,11 +83,10 @@ export default StyleSheet.create({
     height: '100%',
   },
   input: {
-    color: '#FFF',
     flex: 1,
+    color: Style.Colors.primaryWhite,
   },
   icon: {
-    color: CustomStyles.DarkGrayColor,
     marginRight: '3%',
   },
   passwordInputContainer: {
@@ -99,12 +100,11 @@ export default StyleSheet.create({
   forgotContainer: {
     alignSelf: 'flex-end',
     marginRight: '2%',
-    fontSize: 11,
-    fontWeight: 500,
   },
   forgot: {
-    color: CustomStyles.DarkGrayColor,
-    marginTop: '17%',
+    ...Style.Typography.description,
+    color: Style.Colors.primaryGrey,
+    marginVertical: 15,
   },
   containerLine: {
     flexDirection: 'row',
@@ -121,7 +121,8 @@ export default StyleSheet.create({
     backgroundColor: 'transparent',
   },
   textLine: {
-    color: CustomStyles.DarkGrayColor,
+    ...Style.Typography.description,
+    color: Style.Colors.primaryGrey,
     marginHorizontal: 10,
   },
   socialNetwork: {
@@ -132,10 +133,9 @@ export default StyleSheet.create({
   containerSocial: {
     borderWidth: 0.5,
     borderRadius: 8,
-    borderColor:  CustomStyles.DimGrayColor,
+    borderColor: Style.Colors.primaryGrey,
     width: 60,
     height: 50,
-    borderRadius: 8,
     alignItems: 'center',
     marginLeft: '5%',
     marginRight: '5%',
@@ -149,7 +149,7 @@ export default StyleSheet.create({
     position: 'absolute',
     right: 4,
     top: '100%',
-    color: CustomStyles.DarkRedColor,
+    color: Style.Colors.primaryRed, // Presumindo que você tenha um vermelho para erros
     fontSize: 12,
   },
 });

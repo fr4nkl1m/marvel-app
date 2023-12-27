@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Connect from '../pages/Connect';
+import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Forgot from '../pages/Forgot';
 import Verification from '../pages/Verification';
@@ -13,8 +13,8 @@ export default function Routes() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Connect"
-        component={Connect}
+        name="Login"
+        component={Login}
         options={{ headerShown: false }}
       />
       <Stack.Screen
